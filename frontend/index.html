@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackmarket Price Spike Intelligence Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Blackmarket Price Spike Intelligence Dashboard</h1>
+    </header>
+
+    <section class="filters">
+        <label for="commoditySelect">Select Commodity:</label>
+        <select id="commoditySelect">
+            <option value="all">All</option>
+        </select>
+
+        <label for="marketSelect">Select Market:</label>
+        <select id="marketSelect">
+            <option value="all">All</option>
+        </select>
+
+        <label for="stateSelect">Select State:</label>
+        <select id="stateSelect">
+            <option value="all">All</option>
+        </select>
+
+        <button id="applyFilters">Apply Filters</button>
+    </section>
+
+    <main class="dashboard-grid">
+        <div class="card">
+            <h2>Average Spike % per Commodity</h2>
+            <iframe id="commodityBar" src="visualizations/commodity_bar.html" frameborder="0"></iframe>
+        </div>
+        <div class="card">
+            <h2>Spike Distribution Across Markets</h2>
+            <iframe id="marketPie" src="visualizations/market_pie.html" frameborder="0"></iframe>
+        </div>
+        <div class="card">
+            <h2>Price Over Time: Top Commodity</h2>
+            <iframe id="topCommodityLine" src="visualizations/top_commodity_line.html" frameborder="0"></iframe>
+        </div>
+        <div class="card">
+            <h2>Top 10 Commodities by Spike %</h2>
+            <iframe id="top10Commodities" src="visualizations/top10_commodities.html" frameborder="0"></iframe>
+        </div>
+        <div class="card">
+            <h2>State-wise Average Price Spikes</h2>
+            <iframe id="stateMap" src="visualizations/state_map.html" frameborder="0"></iframe>
+        </div>
+        <div class="card">
+            <h2>Heatmap of Market vs Commodity Spikes</h2>
+            <iframe id="heatmap" src="visualizations/market_commodity_heatmap.html" frameborder="0"></iframe>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 SpikeAlert Dashboard | Developed by Prathi 🤍</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
